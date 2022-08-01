@@ -6,7 +6,8 @@ function App() {
        <h1>Connect to the wallet</h1>
        <button onClick={async () => {
           if(window.ethereum) {
-            console.log(await window.ethereum.enable());
+           const account = await window.ethereum.enable();
+            console.log(account);
           } else {
             console.log('Install Metamask');
           }
