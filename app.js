@@ -1,17 +1,10 @@
 import './App.css';
+import Metamask from './connectMetamask';
 
 function App() {
   return (
     <div className="App">
-       <h1>Connect to the wallet</h1>
-       <button onClick={async () => {
-          if(window.ethereum) {
-           const account = await window.ethereum.enable();
-            console.log(account);
-          } else {
-            console.log('Install Metamask');
-          }
-       }}>Connect Metamask</button>
+      <Metamask />
     </div>
   );
 }
